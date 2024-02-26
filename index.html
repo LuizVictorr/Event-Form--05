@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="black"></div>
+    <header>
+        <h1> Crie e compartilhe seu evento. </h1>
+        <p> O primeiro passo, é preencher esse formulário de inscrição.</p>
+    </header>
+    <div>
+        <form id="event-form">
+            <fieldset>
+                <div>
+                    <legend>Informações do Evento</legend>
+                    <div class="camp">
+                        <label for="title">Título * <span>(mínimo de 8 caracteres)</span></label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+                    <div class="camp">
+                        <label for="link">Link do Evento * <span>(comece com https://)</span></label>
+                        <input type="url" name="link" id="link" required>
+                    </div>
+                    <div class="camp">
+                        <label for="whatsapp">Whatsapp para contato * <span>(somente números)</span></label>
+                        <input type="number" name="whatsapp" id="whatsapp" required>
+                    </div>
+                    <div class="camp">
+                        <label for="extra">Informações Extras</label>
+                        <textarea name="extra" id="extra" ></textarea>
+                    </div>
+                    <div class="camp">
+                        <label for="categories">Categorias</label>
+                        <select name="categories" id="categories">
+                            <option value="live">Live</option>
+                            <option value="podcast">Podcast</option>
+                            <option value="videos">Vídeos</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <legend>Privacidade</legend>
+                    <div class="camp">
+                        <label for="email">E-mail do adiministrador * <span>(digite um email válido)</span></label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="camp">
+                        <label for="password">senha de acesso para os participantes * <span>(mínimo de 8 caracteres)</span></label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div id="checkbox">
+                        <input type="checkbox" name="private" id="private"/>
+                        <label for="private">Evento Privado</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <legend>Dia e Hora</legend>
+                    <div id="datetime">
+                        <div class="camp" id="date">
+                            <label for="date">Data</label>
+                            <input type="date" name="date" id="date">
+                        </div>
+                        <div class="camp" id="time">
+                            <label for="first-time">Das</label>
+                            <input type="time" name="first-time" id="first-time">
+                        </div>
+                        <div class="camp" id="time">
+                            <label for="last-time">Até</label>
+                            <input type="time" name="last-time" id="last-time">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div id="button">
+            <button type="submit" form="event-form">
+                Salvar Evento
+            </button>
+        </div>
+    </div>
+</body>
+</html>
